@@ -1,3 +1,4 @@
+# imports
 import streamlit as st
 from ollama import chat
 
@@ -13,34 +14,16 @@ def obtener_respuesta_ollama(input_text):
 # Título de la aplicación
 st.title(":speak_no_evil: Chat con Ollama")
 
-# Inicializar el valor del campo de texto en session_state
-# if "text_input" not in st.session_state:
-#     st.session_state.text_input = ""
 
-# # Crear el campo de texto utilizando session_state
-# user_input = st.text_input(
-#     "Ingresa texto:", value=st.session_state.text_input, key="input_text"
-# )
-
-
-# # Crear un botón para enviar la pregunta
-# if st.button("Enviar"):
-#     respuesta = obtener_respuesta_ollama(user_input)
-#     # Mostrar la respuesta en un área de texto
-#     st.text_area("Respuesta de Ollama:", value=respuesta, height=200)
-
-# # Crear un botón para resetear el formulario
-# if st.button("Resetear"):
-#     st.session_state.text_input = ""  # Resetear el valor en session_state
-#     st.rerun()
-
-
+# creación formulario
 form = st.form(
     key="ollama-form", clear_on_submit=True, enter_to_submit=True, border=True
 )
 pregunta = form.text_input("Ingresa pregunta:")
 submit = form.form_submit_button("enviar")
 st.write(" :outbox_tray: Presione enviar para recibir su respuesta")
+
+# Accion a ejecuar cuando se envia el formulario
 if submit:
 
     with st.spinner(f"Procesando... :surfer: {pregunta}"):
