@@ -1,6 +1,6 @@
 # Ollama
 
-El actul proyecto muestra el uso de Ollama correindo localmente e interactuado con una interfaz desarrolada con streamlit, el codigo desarrolado esta alojaado en el siguiente repositorio:
+El actual proyecto muestra el uso de Ollama ejecutandose localmente e interactuado con una interfaz desarrolada con streamlit, el código desarrollado está alojaado en el siguiente repositorio:
 
 <https://github.com/dmmontero/ollama.git/>
 
@@ -16,18 +16,18 @@ Requerimientos necesarios para el funcionamiento:
   _ollama run llama3.2:1b_
 - Verifique que el modelo se este ejecutando con el comando : _ollama list_
 
-- Abra Anaconda Prompt y ejecute las siguientes instrucciones:
+- Abra el Prompt y ejecute las siguientes instrucciones:
 
-1. Crea un ambiente virtual, en nuestor caso unsamo la version 3.12.8 de python y lo llamamos ollama\
+1. Crea un ambiente virtual, en nuestro caso usamos la version 3.12.8 de python:
    _python -m venv ollama_
 
-2. Ir a la carpeta del proecto y activar el ambiente virtual creado:\
+2. Ir a la carpeta del proyecto y activar el ambiente virtual creado:\
    _.\ollama\Scripts\Activate.ps1_
 
 3. Instalar los paquetes definidos para el proyecto:\
    _pip install -r requirements.txt_
 
-4. Ejecutar el proyecto en modo developer, este comando le permite ver la api en la maquina de desarrollo:\
+4. Ejecutar el proyecto, este comando le permite ver la api en la maquina de desarrollo:\
    _streamlit run .\app.py_
 
-5. Una vez ejecutado el comando podra ver la alicacion en <http://localhost:8501/> 8501 es el puerto por defecto
+5. Una vez ejecutado el comando podra ver la aplicacion en <http://localhost:8501/> 8501 es el puerto por defecto
